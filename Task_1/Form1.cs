@@ -27,7 +27,7 @@ namespace Task_1
 
         public int a;
         public int b;
-        public int c;
+
        public int current = 1;
         public Form1()
         {
@@ -75,7 +75,7 @@ namespace Task_1
                 if (IsPrimeNumber(i))
                 {
                     Invoke(new Action(()=> outputSimple.Text = i.ToString()));
-                    a = i;
+                   // a = i;
                     resetEvent1.WaitOne();
                     Thread.Sleep(500);
                    //if(token.IsCancellationRequested) break;
@@ -123,6 +123,8 @@ namespace Task_1
         private void Restart_Click(object sender, EventArgs e)//TODO
         {
             //cancelTokenSource.Cancel();
+            t1.Abort();
+            t2.Abort();
             a = 0; b=0;
             current = 1;
            // outputFib.Text = resetEvent1.Handle.ToString();
@@ -140,8 +142,7 @@ namespace Task_1
 
             resetEvent1 = new ManualResetEvent(true);
             resetEvent2 = new ManualResetEvent(true);
-            //t1.Abort();
-            //t2.Abort();
+           
 
         }
 
