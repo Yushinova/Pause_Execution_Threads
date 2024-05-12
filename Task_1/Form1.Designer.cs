@@ -113,7 +113,7 @@
             this.stopSimple.Name = "stopSimple";
             this.stopSimple.Size = new System.Drawing.Size(100, 32);
             this.stopSimple.TabIndex = 7;
-            this.stopSimple.Text = "STOP";
+            this.stopSimple.Text = "PAUSE";
             this.stopSimple.UseVisualStyleBackColor = true;
             this.stopSimple.Click += new System.EventHandler(this.stopSimple_Click);
             // 
@@ -146,7 +146,7 @@
             this.stopFib.Name = "stopFib";
             this.stopFib.Size = new System.Drawing.Size(100, 32);
             this.stopFib.TabIndex = 10;
-            this.stopFib.Text = "STOP";
+            this.stopFib.Text = "PAUSE";
             this.stopFib.UseVisualStyleBackColor = true;
             this.stopFib.Click += new System.EventHandler(this.stopFib_Click);
             // 
