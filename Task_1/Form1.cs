@@ -44,7 +44,7 @@ namespace Task_1
             a = Convert.ToInt32(minInput.Text);
         }
 
-        private void startSimple_Click(object sender, EventArgs e)
+        private void startSimple_Click(object sender, EventArgs e)//старт и продолжение задачи
         {
             //cancelTokenSource = new CancellationTokenSource();
             //token = cancelTokenSource.Token;
@@ -112,7 +112,7 @@ namespace Task_1
 
             }
         }
-        private void stopSimple_Click(object sender, EventArgs e)
+        private void stopSimple_Click(object sender, EventArgs e)//пауза
         {
             resetEvent1.Reset();
             //t1.Abort(); 
@@ -120,7 +120,7 @@ namespace Task_1
             //startSimple_Click
         }
 
-        private void Restart_Click(object sender, EventArgs e)//TODO
+        private void Restart_Click(object sender, EventArgs e)//остановить выполнение всех задач и назначить их заново
         {
             //cancelTokenSource.Cancel();
             t1.Abort();
@@ -146,7 +146,7 @@ namespace Task_1
 
         }
 
-        private void startFib_Click(object sender, EventArgs e)
+        private void startFib_Click(object sender, EventArgs e)//старт и продолжение задачи
         {
             resetEvent2.Set();
             if (!t2.IsAlive) t2.Start();
@@ -160,7 +160,7 @@ namespace Task_1
             //await Task.Run(() => FindFib(), token2);
         }
 
-        private void stopFib_Click(object sender, EventArgs e)
+        private void stopFib_Click(object sender, EventArgs e)//пауза
         {
             resetEvent2.Reset();
             //cancelTokenSource2.Cancel();
